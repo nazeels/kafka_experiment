@@ -19,7 +19,7 @@ public class KafkaConsumerConfig {
     @Bean
     public ConsumerFactory<String, String> consumerFactory() {
         Map<String, Object> props = new HashMap<>();
-        String  bootstrapAddress = "localhost:9092";
+        String  bootstrapAddress = StaticVariables.BOOTSTRAP_SERVERS;
         props.put(
                 ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
                 bootstrapAddress);
